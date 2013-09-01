@@ -3,4 +3,25 @@ jason:
   last_name: "Seifer"
   email: "jason@teamtreehouse.com"
   profile_name: "jasonseifer"
-  
+  encrypted_password: $2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq
+#  encrypted_password: "$2a$10$2m91gRrGeTVw49mg3W9WdeVxi9bWagxnkWPmJV1NdQVK..."
+ # encrypted_password: "$2a$10$pZ2AopT/WtGm.XwW4B8NVeDwpwqtYGJmNFu7g9o0uXsk..."
+
+
+jim:
+  first_name: "Jim"
+  last_name: "Hoskins"
+  email: "jim@teamtreehouse.com"
+  profile_name: "jimhoskins"
+
+mike:
+  first_name: "Mike"
+  last_name: "The Frog"
+  email: "mike@teamtreehouse.com"
+  profile_name: "mikethefrog"
+
+blocked_friend:
+  first_name: 'Blocked'
+  last_name: 'Friend'
+  email: 'blocked@teamtreehouse.com'
+  profile_name: 'youblockedme'

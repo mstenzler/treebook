@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  friend_id: 1
+
+two:
+  user_id: 1
+  friend_id: 1
+  
+blocked_by_jason:
+  user: jason
+  friend: blocked_friend
+  state: 'blocked'
