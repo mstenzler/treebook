@@ -1,12 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
-gem 'webrick', '1.3.1'
+#gem 'webrick', '1.3.1'
+
+group :development do
+	gem 'thin'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
    gem 'sqlite3'
+   gem 'log_buddy'
  end
 
 group :production do
@@ -23,6 +28,7 @@ gem 'simple_form'
 gem 'state_machine'
 gem 'draper'
 gem 'js-routes'
+gem 'paperclip'
 
 # Gems used only for assets and not required
 # in production environments by default.
