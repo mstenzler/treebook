@@ -1,10 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+vacation:
   user: jason
-  friend: jim
-
-blocked_by_jason:
-  user: jason
-  friend: blocked_friend
-  state: 'blocked'
+  title: Vacation Pictures

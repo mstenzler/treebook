@@ -1,6 +1,5 @@
 Treebook::Application.routes.draw do
-  get "profiles/show"
-
+  
   devise_scope :user do
     get '/register', to: 'devise/registrations#new', as: :register
     get '/login', to: 'devise/sessions#new', as: :login
@@ -19,6 +18,13 @@ Treebook::Application.routes.draw do
     member do
       put :accept
       put :block
+    end
+  end
+
+  # /jason/albums
+  scope ":profile_name" do
+    resources :albums do
+      resources :pictures
     end
   end
   

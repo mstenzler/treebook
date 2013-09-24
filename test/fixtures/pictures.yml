@@ -1,10 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  album: vacation
   user: jason
-  friend: jim
-
-blocked_by_jason:
-  user: jason
-  friend: blocked_friend
-  state: 'blocked'
+  caption: MyString
+  description: MyText
