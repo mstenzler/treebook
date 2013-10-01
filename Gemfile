@@ -30,6 +30,8 @@ gem 'draper'
 gem 'js-routes'
 gem 'paperclip'
 gem 'twitter-bootstrap-rails'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -45,14 +45,15 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+
   # POST /pictures
   # POST /pictures.json
   def create
     @picture = @album.pictures.new(params[:picture])
-    @picture.user = current_user
-
+    
     respond_to do |format|
       if @picture.save
+        current_user.create_activity @picture, 'created'
         format.html { redirect_to album_pictures_path(@album), notice: 'Picture was successfully created.' }
         format.json { render json: @picture, status: :created, location: @picture }
       else
@@ -65,10 +66,9 @@ class PicturesController < ApplicationController
   # PUT /pictures/1
   # PUT /pictures/1.json
   def update
-    @picture = Picture.find(params[:id])
-
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
+        current_user.create_activity @picture, 'updated'
         format.html { redirect_to album_pictures_path(@album), notice: 'Picture was successfully updated.' }
         format.json { head :no_content }
       else
@@ -81,15 +81,15 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
-    @picture = Picture.find(params[:id])
     @picture.destroy
 
     respond_to do |format|
-      format.html { redirect_to album_pictures_url }
+      current_user.create_activity @picture, 'deleted'
+      format.html { redirect_to album_pictures_url(@album) }
       format.json { head :no_content }
     end
   end
-
+ 
   def url_options
     { profile_name: params[:profile_name] }.merge(super)
   end
